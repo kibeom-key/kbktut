@@ -50,7 +50,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.kibeom-key"
                 artifactId = "kbktut"
-                version = "1.0.0"
+                version = "1.0.2"
 
                 pom {
                     name.set("kbktut")
