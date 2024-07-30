@@ -42,3 +42,21 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            register<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.github.kibeom-key"
+                artifactId = "kbktut"
+                version = "1.0.0"
+
+                pom {
+                    name.set("kbktut")
+                    description.set("Collection of Android Kotlin utility codes created by kb")
+                }
+            }
+        }
+    }
+}
